@@ -16,14 +16,16 @@ function CLM() {
 
     clm.getLocaleByAlpha2 = function(alpha2) {
         return countryByAlpha2Code[alpha2].default_local;
-    }
+    };
 
     clm.getCountryNameByAlpha2 = function(alpha2) {
         return countryByAlpha2Code[alpha2].name;
-    }
+    };
+
+    console.log(clm);
 
     return clm; 
 
 }
 
-module.export = CLM()
+module.exports = CLM();
