@@ -11,15 +11,24 @@ function CLM() {
     }
 
     clm.getAlpha3ByAlpha2 = function(alpha2) {
-        return countryByAlpha2Code[alpha2].alpha3;
+        if(countryByAlpha2Code[alpha2])
+            return countryByAlpha2Code[alpha2].alpha3;
+        else 
+            return undefined;
     }; 
 
     clm.getLocaleByAlpha2 = function(alpha2) {
-        return countryByAlpha2Code[alpha2].default_local;
+        if(countryByAlpha2Code[alpha2])
+            return countryByAlpha2Code[alpha2].default_local;
+        else 
+            return undefined;
     };
 
     clm.getCountryNameByAlpha2 = function(alpha2) {
-        return countryByAlpha2Code[alpha2].name;
+        if(countryByAlpha2Code[alpha2])
+            return countryByAlpha2Code[alpha2].name;
+        else 
+            return undefined; 
     };
 
     console.log(clm);
