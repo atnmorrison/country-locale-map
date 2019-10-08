@@ -1,6 +1,6 @@
 const fs = require('fs'); 
 function CLM() {
-    var clm;
+    var clm = {};
     var rawdata = fs.readFileSync('countries.json');
     var countries = JSON.parse(rawdata);
 
