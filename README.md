@@ -1,8 +1,8 @@
-#Country Local Map 
+# Country Local Map 
 
 This is a simple package that provides easy conversion from alpha2 to alpha3 country codes as well as a default locale for each country
 
-##Usage
+## Usage
 
 const clm = require(country-locale-map);
 
