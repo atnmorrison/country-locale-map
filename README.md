@@ -1,4 +1,4 @@
-# Country Local Map 
+# Country Locale Map 
 
 This is a simple package that provides easy conversion from alpha2 to alpha3 country codes as well as a default locale for each country
 
