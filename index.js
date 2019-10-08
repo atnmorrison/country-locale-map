@@ -1,7 +1,7 @@
 const fs = require('fs'); 
 function CLM() {
     var clm = {};
-    var rawdata = fs.readFileSync('countries.json');
+    var rawdata = fs.readFileSync(__dirname+'/countries.json');
     var countries = JSON.parse(rawdata);
 
     var countryByAlpha2Code = {};
