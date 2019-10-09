@@ -3,18 +3,18 @@ node_js:
   - '10'
 jobs:
   include:
-  - stage: Build and test   
-    script:
-      - npm run lint
-      - npm test
-  - stage: npm release
-    deploy:
-      provider: npm
-      email: '$NPM_EMAIL'
-      api_key: '$NPM_TOKEN'
-      skip_cleanup: true
-      on:
-        tags: true
+    - stage: Build and test   
+      script:
+        - npm run lint
+        - npm test
+    - stage: npm release
+      deploy:
+        provider: npm
+        email: '$NPM_EMAIL'
+        api_key: '$NPM_TOKEN'
+        skip_cleanup: true
+        on:
+          tags: true
 branches:
   only:
     - master
