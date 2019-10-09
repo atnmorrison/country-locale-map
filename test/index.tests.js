@@ -90,9 +90,4 @@ describe('CountryLanguageMap', function(){
         expect(result.name).to.equal('Canada');
         expect(result.numeric).to.equal('124');
     });
-
-
-
-
-
 })

@@ -80,7 +80,6 @@ function CLM() {
         return countryByAlpha3Code[alpha3];
     }
 
-
     /* get values by numeric */
     clm.getAlpha2ByNumeric = function(numeric) {
         if(countryByNumericCode[numeric])
@@ -89,7 +88,6 @@ function CLM() {
             return undefined;
     }; 
 
-    /* get values by numeric */
     clm.getAlpha3ByNumeric = function(numeric) {
         if(countryByNumericCode[numeric])
             return countryByNumericCode[numeric].alpha3;
