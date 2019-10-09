@@ -4,12 +4,28 @@ This is a simple package that provides easy conversion from alpha2 to alpha3 cou
 
 ## Usage
 
-const clm = require(country-locale-map);
+    const clm = require(country-locale-map);
+    clm.getAlpha3ByAlpha2(alpha2) 
 
-clm.getAlpha3ByAlpha2(alpha2) 
 
-returns the alpha3 code of a country given it's alpha2 code
+## Methods
 
-clm.getLocaleByAlpha2(alpha2) 
+- getAlpha3ByAlpha2(alpha2) 
+- getLocaleByAlpha2(alpha2)
+- getCountryNameByAlpha2(alpha2) 
+- getNumericByAlpha2(alpha2)
+- getCountryByAlpha2(alpha2)
 
-returns a default locale for the country given it's alpha2 code
+- getAlpha2ByAlpha3(alhpa3)
+- getLocaleByAlpha3(alhpa3)
+- getCountryNameByAlpha3(alhpa3)
+- getNumericByAlpha3(alhpa3)
+- getCountryByAlpha3(alhpa3)
+
+- getAlpha2ByNumeric(numeric)
+- getAlpha3ByNumeric(numeric)
+- getLocaleByNumeric(numeric)
+- getCountryNameByNumeric(numeric)
+- getCountryByNumeric(numeric) 
+
+
