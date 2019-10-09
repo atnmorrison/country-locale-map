@@ -18,11 +18,11 @@ This is a simple package that provides easy conversion from alpha2 to alpha3 cou
 - getCountryByAlpha2(alpha2)
 
 ### Alpha3
-- getAlpha2ByAlpha3(alhpa3)
-- getLocaleByAlpha3(alhpa3)
-- getCountryNameByAlpha3(alhpa3)
-- getNumericByAlpha3(alhpa3)
-- getCountryByAlpha3(alhpa3)
+- getAlpha2ByAlpha3(alpha3)
+- getLocaleByAlpha3(alpha3)
+- getCountryNameByAlpha3(alpha3)
+- getNumericByAlpha3(alpha3)
+- getCountryByAlpha3(alpha3)
 
 ### Numeric
 - getAlpha2ByNumeric(numeric)
