@@ -24,7 +24,7 @@ function CLM() {
 
     clm.getLocaleByAlpha2 = function(alpha2) {
         if(countryByAlpha2Code[alpha2])
-            return countryByAlpha2Code[alpha2].default_local;
+            return countryByAlpha2Code[alpha2].default_locale;
         else 
             return undefined;
     };
@@ -35,6 +35,13 @@ function CLM() {
         else 
             return undefined; 
     };
+
+    clm.getNumericByAlpha2 = function(alpha2) {
+        if(countryByAlpha2Code[alpha2])
+            return countryByAlpha2Code[alpha2].numeric;
+        else 
+            return undefined; 
+    };    
 
     clm.getCountryByAlpha2 = function(alpha2) {
         return countryByAlpha2Code[alpha2];
@@ -49,18 +56,25 @@ function CLM() {
     }; 
 
     clm.getLocaleByAlpha3 = function(alpha3) {
-        if(countryByAlpha2Code[alpha3])
-            return countryByAlpha3Code[alpha3].default_local;
+        if(countryByAlpha3Code[alpha3])
+            return countryByAlpha3Code[alpha3].default_locale;
         else 
             return undefined;
     };
 
     clm.getCountryNameByAlpha3 = function(alpha3) {
-        if(countryByAlpha2Code[alpha3])
+        if(countryByAlpha3Code[alpha3])
             return countryByAlpha3Code[alpha3].name;
         else 
             return undefined; 
     };
+
+    clm.getNumericByAlpha3 = function(alpha3) {
+        if(countryByAlpha3Code[alpha3])
+            return countryByAlpha3Code[alpha3].numeric;
+        else 
+            return undefined; 
+    };    
 
     clm.getCountryByAlpha3 = function(alpha3) {
         return countryByAlpha3Code[alpha3];
@@ -75,9 +89,17 @@ function CLM() {
             return undefined;
     }; 
 
+    /* get values by numeric */
+    clm.getAlpha3ByNumeric = function(numeric) {
+        if(countryByNumericCode[numeric])
+            return countryByNumericCode[numeric].alpha3;
+        else 
+            return undefined;
+    };     
+
     clm.getLocaleByNumeric = function(numeric) {
         if(countryByNumericCode[numeric])
-            return countryByNumericCode[numeric].default_local;
+            return countryByNumericCode[numeric].default_locale;
         else 
             return undefined;
     };

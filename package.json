@@ -4,7 +4,7 @@
   "description": "provides mapping between country codes and default country locals",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha"
   },
   "keywords": [
     "locale",
@@ -18,6 +18,8 @@
   "author": "atnmorrison",
   "license": "ISC",
   "dependencies": {
-    "fs": "0.0.1-security"
+    "chai": "^4.2.0",
+    "fs": "0.0.1-security",
+    "mocha": "^6.2.1"
   }
 }
