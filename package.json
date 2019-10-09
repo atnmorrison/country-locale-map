@@ -1,6 +1,6 @@
 {
   "name": "country-locale-map",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "provides mapping between country codes and default country locals",
   "main": "index.js",
   "scripts": {
