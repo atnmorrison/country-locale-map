@@ -5,7 +5,7 @@ This is a simple package that provides easy conversion from alpha2 to alpha3 cou
 ## Usage
 
     const clm = require(country-locale-map);
-    clm.getAlpha3ByAlpha2('CA') //returns 'CAN' 
+    clm.getAlpha3ByAlpha2('CA'); //returns 'CAN' 
 
 
 ## Methods
