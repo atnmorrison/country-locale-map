@@ -19,12 +19,10 @@
   },
   "author": "atnmorrison",
   "license": "ISC",
-  "dependencies": {
-    "chai": "^4.2.0",
-    "fs": "0.0.1-security",
-    "mocha": "^6.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^6.5.1"
+    "eslint": "^6.5.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1"
   }
 }
