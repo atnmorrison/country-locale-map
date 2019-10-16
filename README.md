@@ -16,6 +16,7 @@ clm.getAlpha3ByAlpha2('CA'); //returns 'CAN'
 - getLocaleByAlpha2(alpha2)
 - getCountryNameByAlpha2(alpha2) 
 - getNumericByAlpha2(alpha2)
+- getCurrencyByAlpha2(alpha2)
 - getCountryByAlpha2(alpha2)
 
 ### Alpha3
@@ -23,6 +24,7 @@ clm.getAlpha3ByAlpha2('CA'); //returns 'CAN'
 - getLocaleByAlpha3(alpha3)
 - getCountryNameByAlpha3(alpha3)
 - getNumericByAlpha3(alpha3)
+- getCurrencyByAlpha3(alpha3)
 - getCountryByAlpha3(alpha3)
 
 ### Numeric
@@ -30,6 +32,7 @@ clm.getAlpha3ByAlpha2('CA'); //returns 'CAN'
 - getAlpha3ByNumeric(numeric)
 - getLocaleByNumeric(numeric)
 - getCountryNameByNumeric(numeric)
+- getCurrencyByNumeric(numeric)
 - getCountryByNumeric(numeric) 
 
 
