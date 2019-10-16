@@ -41,7 +41,14 @@ function CLM() {
             return countryByAlpha2Code[alpha2].numeric;
         else 
             return undefined; 
-    };    
+    };
+    
+    clm.getCurrencyByAlpha2 = function(alpha2) {
+        if(countryByAlpha2Code[alpha2])
+            return countryByAlpha2Code[alpha2].currency;
+        else 
+            return undefined; 
+    }; 
 
     clm.getCountryByAlpha2 = function(alpha2) {
         return countryByAlpha2Code[alpha2];
@@ -76,6 +83,13 @@ function CLM() {
             return undefined; 
     };    
 
+    clm.getCurrencyByAlpha3 = function(alpha3) {
+        if(countryByAlpha3Code[alpha3])
+            return countryByAlpha3Code[alpha3].currency;
+        else 
+            return undefined; 
+    }; 
+
     clm.getCountryByAlpha3 = function(alpha3) {
         return countryByAlpha3Code[alpha3];
     }
@@ -108,6 +122,13 @@ function CLM() {
         else 
             return undefined; 
     };    
+
+    clm.getCurrencyByNumeric = function(numeric) {
+        if(countryByNumericCode[numeric])
+            return countryByNumericCode[numeric].currency;
+        else 
+            return undefined;
+    };
 
     clm.getCountryByNumeric = function(numeric) {
         return countryByNumericCode[numeric];

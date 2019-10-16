@@ -25,6 +25,11 @@ describe('CountryLanguageMap', function(){
         expect(result).to.equal('en_CA');
     });
 
+    it('getCurrencyByAlpha2 should return CAD if passed in CA', function(){
+        let result = clm.getCurrencyByAlpha2('CA');
+        expect(result).to.equal('CAD');
+    });
+
     it('getCountryByAlpha2 should return object if passed CA', function(){
         let result = clm.getCountryByAlpha2('CA');
         expect(result.alpha3).to.equal('CAN');
@@ -54,7 +59,12 @@ describe('CountryLanguageMap', function(){
         expect(result).to.equal('en_CA');
     });
 
-    it('getCountryByAlpha2 should return object if passed CAN', function(){
+    it('getCurrencyByAlpha2 should return CAD if passed in CAN', function(){
+        let result = clm.getCurrencyByAlpha3('CAN');
+        expect(result).to.equal('CAD');
+    });
+
+    it('getCountryByAlpha3 should return object if passed CAN', function(){
         let result = clm.getCountryByAlpha3('CAN');
         expect(result.alpha3).to.equal('CAN');
         expect(result.alpha2).to.equal('CA');
@@ -84,11 +94,27 @@ describe('CountryLanguageMap', function(){
         expect(result).to.equal('en_CA');
     });
 
+    it('getCurrencyByNumeric should return CAD if passed in 124', function(){
+        let result = clm.getCurrencyByNumeric('124');
+        expect(result).to.equal('CAD');
+    });
+
     it('getCountryByNumeric should return object if passed 124', function(){
         let result = clm.getCountryByNumeric('124');
         expect(result.alpha3).to.equal('CAN');
         expect(result.alpha2).to.equal('CA');
         expect(result.name).to.equal('Canada');
         expect(result.numeric).to.equal('124');
+        expect(result.currency).to.equal('CAD');
+    });
+
+    it('getCountryByAlpha3 should return object if passed USA', function(){
+        let result = clm.getCountryByAlpha3('USA');
+        expect(result.alpha3).to.equal('USA');
+        expect(result.alpha2).to.equal('US');
+        expect(result.name).to.equal('United States');
+        expect(result.default_locale).to.equal('en_US');
+        expect(result.numeric).to.equal('840');
+        expect(result.currency).to.equal('USD');
     });
 })
