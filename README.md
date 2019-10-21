@@ -1,10 +1,10 @@
 # Country Locale Map [![Build Status](https://travis-ci.com/atnmorrison/country-locale-map.svg?branch=master)](https://travis-ci.com/atnmorrison/country-locale-map)
 
-This is a simple package that provides easy conversion from alpha2 to alpha3 country codes as well as a default locale for each country
+This is a simple package that provides easy conversion between country codes and names as well as providing a default locale for each country
 
 ## Usage
 
-
+```javascript
 const clm = require(country-locale-map);
 clm.getAlpha3ByAlpha2('CA'); //returns 'CAN' 
 ```
@@ -12,6 +12,7 @@ clm.getAlpha3ByAlpha2('CA'); //returns 'CAN'
 ## Functions
 
 ### Alpha2 
+
 - getAlpha3ByAlpha2(alpha2)
 
 ```javascript
