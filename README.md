@@ -4,7 +4,7 @@ This is a simple package that provides easy conversion from alpha2 to alpha3 cou
 
 ## Usage
 
-```javascript
+
 const clm = require(country-locale-map);
 clm.getAlpha3ByAlpha2('CA'); //returns 'CAN' 
 ```
@@ -12,27 +12,232 @@ clm.getAlpha3ByAlpha2('CA'); //returns 'CAN'
 ## Functions
 
 ### Alpha2 
-- getAlpha3ByAlpha2(alpha2) 
+- getAlpha3ByAlpha2(alpha2)
+
+```javascript
+clm.getAlpha3ByAlpha2('CA'); //returns 'CAN' 
+```
+
 - getLocaleByAlpha2(alpha2)
+
+```javascript
+clm.getLocaleByAlpha2('CA'); //returns 'en_CA' 
+```
+
 - getCountryNameByAlpha2(alpha2) 
+
+```javascript
+clm.getCountryNameByAlpha2('CA'); //returns 'Canada' 
+```
+
 - getNumericByAlpha2(alpha2)
+
+```javascript
+clm.getCountryNameByAlpha2('CA'); //returns '124' 
+```
+
 - getCurrencyByAlpha2(alpha2)
+
+```javascript
+clm.getCurrencyByAlpha2('CA'); //returns 'CAD' 
+```
+
 - getCountryByAlpha2(alpha2)
+
+```javascript
+clm.getCountryNameByAlpha2('CA'); 
+
+/*returns 
+
+    {
+        "name":"Canada",
+        "alpha2":"CA",
+        "alpha3":"CAN",
+        "numeric":"124",
+        "locals":["en_CA","fr_CA"],
+        "default_locale":"en_CA",
+        "currency":"CAD",
+        "languages":["en","fr"],
+        "capital":"Ottawa",
+        "emoji":"🇨🇦",
+        "emojiU":"U+1F1E8 U+1F1E6"
+    }
+
+*/
+```
 
 ### Alpha3
 - getAlpha2ByAlpha3(alpha3)
+
+```javascript
+clm.getAlpha3ByAlpha2('CAN'); //returns 'CA' 
+```
+
 - getLocaleByAlpha3(alpha3)
+
+```javascript
+clm.getLocaleByAlpha3('CAN'); //returns 'en_CA' 
+```
+
 - getCountryNameByAlpha3(alpha3)
+
+```javascript
+clm.getCountryNameByAlpha3('CAN'); //returns 'Canada' 
+```
+
 - getNumericByAlpha3(alpha3)
+
+```javascript
+clm.getNumericByAlpha3('CAN'); //returns '124' 
+```
+
 - getCurrencyByAlpha3(alpha3)
+
+```javascript
+clm.getCurrencyByAlpha3('CAN'); //returns 'CAD' 
+```
+
 - getCountryByAlpha3(alpha3)
+
+```javascript
+clm.getCountryByAlpha3('CAN');
+
+
+/*returns 
+
+    {
+        "name":"Canada",
+        "alpha2":"CA",
+        "alpha3":"CAN",
+        "numeric":"124",
+        "locals":["en_CA","fr_CA"],
+        "default_locale":"en_CA",
+        "currency":"CAD",
+        "languages":["en","fr"],
+        "capital":"Ottawa",
+        "emoji":"🇨🇦",
+        "emojiU":"U+1F1E8 U+1F1E6"
+    }
+
+*/
+
+```
 
 ### Numeric
 - getAlpha2ByNumeric(numeric)
+
+```javascript
+clm.getAlpha2ByNumeric('123'); //returns 'CA' 
+```
+
 - getAlpha3ByNumeric(numeric)
+
+```javascript
+clm.getAlpha3ByNumeric('124'); //returns 'CAN' 
+```
+
 - getLocaleByNumeric(numeric)
+
+```javascript
+clm.getLocaleByNumeric('124'); //returns 'en_CA' 
+```
+
 - getCountryNameByNumeric(numeric)
+
+```javascript
+clm.getCountryNameByNumeric('124'); //returns 'Canada' 
+```
+
 - getCurrencyByNumeric(numeric)
+
+```javascript
+clm.getCurrencyByNumeric('124'); //returns 'CAD' 
+```
+
 - getCountryByNumeric(numeric) 
+
+```javascript
+clm.getCountryByNumeric('124');
+
+
+/*returns 
+
+    {
+        "name":"Canada",
+        "alpha2":"CA",
+        "alpha3":"CAN",
+        "numeric":"124",
+        "locals":["en_CA","fr_CA"],
+        "default_locale":"en_CA",
+        "currency":"CAD",
+        "languages":["en","fr"],
+        "capital":"Ottawa",
+        "emoji":"🇨🇦",
+        "emojiU":"U+1F1E8 U+1F1E6"
+    }
+
+*/
+
+
+```
+
+
+### Name
+- getAlpha2ByName(country)
+
+```javascript
+clm.getAlpha2ByName('Canada'); //returns 'CA' 
+```
+
+- getAlpha3ByName(country)
+
+```javascript
+clm.getAlpha3ByName('Canada'); //returns 'CAN' 
+```
+
+- getLocaleByName(country)
+
+```javascript
+clm.getLocaleByName('Canada'); //returns 'en_CA' 
+```
+
+- getNumericByName(country)
+
+```javascript
+clm.getNumericByName('Canada'); //returns '124' 
+```
+
+- getCurrencyByName(country)
+
+```javascript
+clm.getCurrencyByName('Canada'); //returns 'CAD' 
+```
+
+- getCountryByName(country) 
+
+```javascript
+clm.getCountryByName('Canada');
+
+
+/*returns 
+
+    {
+        "name":"Canada",
+        "alpha2":"CA",
+        "alpha3":"CAN",
+        "numeric":"124",
+        "locals":["en_CA","fr_CA"],
+        "default_locale":"en_CA",
+        "currency":"CAD",
+        "languages":["en","fr"],
+        "capital":"Ottawa",
+        "emoji":"🇨🇦",
+        "emojiU":"U+1F1E8 U+1F1E6"
+    }
+
+*/
+
+
+```
 
 

@@ -108,6 +108,44 @@ describe('CountryLanguageMap', function(){
         expect(result.currency).to.equal('CAD');
     });
 
+
+    it('getAlpha3ByName should return CAN if passed in Canada', function(){
+        let result = clm.getAlpha3ByName('Canada');
+        expect(result).to.equal('CAN');
+    });
+
+    it('getNumericByName should return 124 if passed in Canada', function(){
+        let result = clm.getNumericByName('Canada');
+        expect(result).to.equal('124');
+    });
+
+    it('getAlpha2ByName should return CA if passed in Canada', function(){
+        let result = clm.getAlpha2ByName('Canada');
+        expect(result).to.equal('CA');
+    });
+
+    it('getLocaleByName should return en_CA if passed in Canada', function(){
+        let result = clm.getLocaleByName('Canada');
+        expect(result).to.equal('en_CA');
+    });
+
+    it('getCurrencyByName should return CAD if passed in Canada', function(){
+        let result = clm.getCurrencyByName('Canada');
+        expect(result).to.equal('CAD');
+    });
+
+    it('getCountryByName should return object if passed Canada', function(){
+        let result = clm.getCountryByName('Canada');
+        expect(result.alpha3).to.equal('CAN');
+        expect(result.alpha2).to.equal('CA');
+        expect(result.name).to.equal('Canada');
+        expect(result.numeric).to.equal('124');
+        expect(result.currency).to.equal('CAD');
+        expect(result.capital).to.equal('Ottawa');
+        expect(result.emoji).to.equal('🇨🇦');
+    });
+
+
     it('getCountryByAlpha3 should return object if passed USA', function(){
         let result = clm.getCountryByAlpha3('USA');
         expect(result.alpha3).to.equal('USA');

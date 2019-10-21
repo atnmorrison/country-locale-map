@@ -7,11 +7,13 @@ function CLM() {
     var countryByAlpha2Code = {};
     var countryByAlpha3Code = {};
     var countryByNumericCode = {};
+    var countryByName = {};
 
     for(let i=0; i<countries.length; ++i) {
         countryByAlpha2Code[countries[i]['alpha2']] = countries[i];
         countryByAlpha3Code[countries[i]['alpha3']] = countries[i];
         countryByNumericCode[countries[i]['numeric']] = countries[i];
+        countryByName[countries[i]['name']] = countries[i];
     }
 
     /* get values by alpha2 */
@@ -132,6 +134,46 @@ function CLM() {
 
     clm.getCountryByNumeric = function(numeric) {
         return countryByNumericCode[numeric];
+    };
+
+    /* get values by numeric */
+    clm.getAlpha2ByName = function(name) {
+        if(countryByName[name])
+            return countryByName[name].alpha2;
+        else 
+            return undefined;
+    }; 
+
+    clm.getAlpha3ByName = function(name) {
+        if(countryByName[name])
+            return countryByName[name].alpha3;
+        else 
+            return undefined;
+    };     
+
+    clm.getLocaleByName = function(name) {
+        if(countryByName[name])
+            return countryByName[name].default_locale;
+        else 
+            return undefined;
+    };
+
+    clm.getNumericByName = function(name) {
+        if(countryByName[name])
+            return countryByName[name].numeric;
+        else 
+            return undefined; 
+    };    
+
+    clm.getCurrencyByName = function(name) {
+        if(countryByName[name])
+            return countryByName[name].currency;
+        else 
+            return undefined;
+    };
+
+    clm.getCountryByName = function(name) {
+        return countryByName[name];
     };
 
     return clm; 

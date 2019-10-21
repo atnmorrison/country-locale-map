@@ -9,9 +9,12 @@
     "format": "prettier --write \"src/**/*.+(js|md|ts|css|sass|less|graphql|yml|yaml|scss|json|vue)\""
   },
   "keywords": [
-    "locale",
     "country",
-    "codes"
+    "locale",
+    "alpha",
+    "numeric",
+    "currency",
+    "emoji"
   ],
   "repository": {
     "type": "git",
@@ -21,8 +24,9 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^6.5.1",
     "chai": "^4.2.0",
+    "countries-list": "^2.4.3",
+    "eslint": "^6.5.1",
     "mocha": "^6.2.1"
   }
 }
