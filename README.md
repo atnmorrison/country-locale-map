@@ -1,6 +1,6 @@
 # Country Locale Map [![Build Status](https://travis-ci.com/atnmorrison/country-locale-map.svg?branch=master)](https://travis-ci.com/atnmorrison/country-locale-map)
 
-This is a simple package that provides easy conversion between country codes and names as well as providing a default locale for each country
+Provides easy conversion between country codes and names as well as a default locale for each country
 
 ## Usage
 
