@@ -1,4 +1,5 @@
 const fs = require('fs'); 
+const fuzz = require('fuzzball');
 function CLM() {
     var clm = {};
     var rawdata = fs.readFileSync(__dirname+'/countries.json');
@@ -8,12 +9,15 @@ function CLM() {
     var countryByAlpha3Code = {};
     var countryByNumericCode = {};
     var countryByName = {};
+    var countryNames = [];
+
 
     for(let i=0; i<countries.length; ++i) {
         countryByAlpha2Code[countries[i]['alpha2']] = countries[i];
         countryByAlpha3Code[countries[i]['alpha3']] = countries[i];
         countryByNumericCode[countries[i]['numeric']] = countries[i];
         countryByName[countries[i]['name']] = countries[i];
+        countryNames.push(countries[i]['name']);
     }
 
     /* get values by alpha2 */
@@ -136,45 +140,95 @@ function CLM() {
         return countryByNumericCode[numeric];
     };
 
-    /* get values by numeric */
-    clm.getAlpha2ByName = function(name) {
-        if(countryByName[name])
+    /* get values by country name */
+    clm.getAlpha2ByName = function(name, fuzzy) {
+        if(countryByName[name]) {
             return countryByName[name].alpha2;
-        else 
-            return undefined;
+        } else if(fuzzy) {
+            let match = getClosestMatch(name);
+            if(match) {
+                return countryByName[match].alpha2;
+            }
+        }
+        return undefined;
     }; 
 
-    clm.getAlpha3ByName = function(name) {
-        if(countryByName[name])
+    clm.getAlpha3ByName = function(name, fuzzy) {
+        if(countryByName[name]) {
             return countryByName[name].alpha3;
-        else 
-            return undefined;
+        } else if(fuzzy) {
+            let match = getClosestMatch(name);
+            if(match) {
+                return countryByName[match].alpha3;
+            }
+        }
+        
+        return undefined;
     };     
 
-    clm.getLocaleByName = function(name) {
-        if(countryByName[name])
+    clm.getLocaleByName = function(name, fuzzy) {
+        if(countryByName[name]) {
             return countryByName[name].default_locale;
-        else 
-            return undefined;
+        } else if(fuzzy) {
+            let match = getClosestMatch(name);
+            if(match) {
+                return countryByName[match].default_locale;
+            }
+        }
+        
+        return undefined;
     };
 
-    clm.getNumericByName = function(name) {
-        if(countryByName[name])
+    clm.getNumericByName = function(name, fuzzy) {
+        if(countryByName[name]) {
             return countryByName[name].numeric;
-        else 
-            return undefined; 
+        } else if(fuzzy) {
+            let match = getClosestMatch(name);
+            if(match) {
+                return countryByName[match].numeric;
+            }
+        }
+        return undefined; 
     };    
 
-    clm.getCurrencyByName = function(name) {
-        if(countryByName[name])
+    clm.getCurrencyByName = function(name, fuzzy) {
+        if(countryByName[name]) {
             return countryByName[name].currency;
-        else 
-            return undefined;
+        } else if(fuzzy) {
+            let match = getClosestMatch(name);
+            if(match) {
+                return countryByName[match].currency;
+            }
+        }
+        
+        return undefined;
     };
 
-    clm.getCountryByName = function(name) {
-        return countryByName[name];
+    clm.getCountryByName = function(name, fuzzy) {
+        
+        if(countryByName[name]) {
+            return countryByName[name];
+        } else if(fuzzy) {
+            let match = getClosestMatch(name);
+            if(match) {
+                return countryByName[match];
+            }
+        }       
+
+        return undefined; 
+
     };
+
+    function getClosestMatch(name) {
+
+        let result = fuzz.extract(name, countryNames);
+        if(result[0][1] >= 60) {
+            return result[0][0];
+        }
+
+        return undefined;
+
+    }
 
     return clm; 
 
