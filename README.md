@@ -184,7 +184,7 @@ clm.getCountryByNumeric('124');
 
 
 ### Name
-- getAlpha2ByName(country)
+- getAlpha2ByName(country, fuzzy) 
 
 ```javascript
 clm.getAlpha2ByName('Canada'); //returns 'CA' 
@@ -219,6 +219,30 @@ clm.getCurrencyByName('Canada'); //returns 'CAD'
 ```javascript
 clm.getCountryByName('Canada');
 
+/*returns 
+
+    {
+        "name":"Canada",
+        "alpha2":"CA",
+        "alpha3":"CAN",
+        "numeric":"124",
+        "locales":["en_CA","fr_CA"],
+        "default_locale":"en_CA",
+        "currency":"CAD",
+        "languages":["en","fr"],
+        "capital":"Ottawa",
+        "emoji":"🇨🇦",
+        "emojiU":"U+1F1E8 U+1F1E6"
+    }
+
+*/
+
+```
+
+if true is passed for fuzzy these functions will do a fuzzy match if it can't find an exact match eg:
+
+```javascript
+clm.getCountryByName('Candaa', true);
 
 /*returns 
 
@@ -238,7 +262,5 @@ clm.getCountryByName('Canada');
 
 */
 
-
 ```
-
 
