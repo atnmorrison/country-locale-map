@@ -14,7 +14,9 @@
     "alpha",
     "numeric",
     "currency",
-    "emoji"
+    "emoji",
+    "fuzzy",
+    "capital"
   ],
   "repository": {
     "type": "git",
