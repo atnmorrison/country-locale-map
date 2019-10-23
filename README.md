@@ -282,7 +282,5 @@ clm.getCountryByName('Candaa', true);
 
 */
 
-*/
-
 ```
 
