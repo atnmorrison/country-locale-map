@@ -262,8 +262,6 @@ clm.getCountryByName('Candaa', true);
 
 /*returns 
 
-/*returns 
-
     {
         "name":"Canada",
         "alpha2":"CA",
