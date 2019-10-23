@@ -61,7 +61,11 @@ clm.getCountryNameByAlpha2('CA');
         "languages":["en","fr"],
         "capital":"Ottawa",
         "emoji":"🇨🇦",
-        "emojiU":"U+1F1E8 U+1F1E6"
+        "emojiU":"U+1F1E8 U+1F1E6",
+        "fips":"CA",
+        "internet":"CA",
+        "continent":"Americas",
+        "region":"North America"
     }
 
 */
@@ -117,7 +121,11 @@ clm.getCountryByAlpha3('CAN');
         "languages":["en","fr"],
         "capital":"Ottawa",
         "emoji":"🇨🇦",
-        "emojiU":"U+1F1E8 U+1F1E6"
+        "emojiU":"U+1F1E8 U+1F1E6",
+        "fips":"CA",
+        "internet":"CA",
+        "continent":"Americas",
+        "region":"North America"
     }
 
 */
@@ -174,7 +182,11 @@ clm.getCountryByNumeric('124');
         "languages":["en","fr"],
         "capital":"Ottawa",
         "emoji":"🇨🇦",
-        "emojiU":"U+1F1E8 U+1F1E6"
+        "emojiU":"U+1F1E8 U+1F1E6",
+        "fips":"CA",
+        "internet":"CA",
+        "continent":"Americas",
+        "region":"North America"
     }
 
 */
@@ -232,7 +244,11 @@ clm.getCountryByName('Canada');
         "languages":["en","fr"],
         "capital":"Ottawa",
         "emoji":"🇨🇦",
-        "emojiU":"U+1F1E8 U+1F1E6"
+        "emojiU":"U+1F1E8 U+1F1E6",
+        "fips":"CA",
+        "internet":"CA",
+        "continent":"Americas",
+        "region":"North America"
     }
 
 */
@@ -243,6 +259,8 @@ if true is passed for fuzzy these functions will do a fuzzy match if it can't fi
 
 ```javascript
 clm.getCountryByName('Candaa', true);
+
+/*returns 
 
 /*returns 
 
@@ -257,8 +275,14 @@ clm.getCountryByName('Candaa', true);
         "languages":["en","fr"],
         "capital":"Ottawa",
         "emoji":"🇨🇦",
-        "emojiU":"U+1F1E8 U+1F1E6"
+        "emojiU":"U+1F1E8 U+1F1E6",
+        "fips":"CA",
+        "internet":"CA",
+        "continent":"Americas",
+        "region":"North America"
     }
+
+*/
 
 */
 
