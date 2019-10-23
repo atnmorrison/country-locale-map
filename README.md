@@ -190,31 +190,31 @@ clm.getCountryByNumeric('124');
 clm.getAlpha2ByName('Canada'); //returns 'CA' 
 ```
 
-- getAlpha3ByName(country)
+- getAlpha3ByName(country, fuzzy)
 
 ```javascript
 clm.getAlpha3ByName('Canada'); //returns 'CAN' 
 ```
 
-- getLocaleByName(country)
+- getLocaleByName(country, fuzzy)
 
 ```javascript
 clm.getLocaleByName('Canada'); //returns 'en_CA' 
 ```
 
-- getNumericByName(country)
+- getNumericByName(country, fuzzy)
 
 ```javascript
 clm.getNumericByName('Canada'); //returns '124' 
 ```
 
-- getCurrencyByName(country)
+- getCurrencyByName(country, fuzzy)
 
 ```javascript
 clm.getCurrencyByName('Canada'); //returns 'CAD' 
 ```
 
-- getCountryByName(country) 
+- getCountryByName(country, fuzzy) 
 
 ```javascript
 clm.getCountryByName('Canada');
