@@ -34,7 +34,7 @@ clm.getCountryNameByAlpha2('CA'); //returns 'Canada'
 - getNumericByAlpha2(alpha2)
 
 ```javascript
-clm.getCountryNameByAlpha2('CA'); //returns '124' 
+clm.getNumericByAlpha2('CA'); //returns '124' 
 ```
 
 - getCurrencyByAlpha2(alpha2)
@@ -46,7 +46,7 @@ clm.getCurrencyByAlpha2('CA'); //returns 'CAD'
 - getCountryByAlpha2(alpha2)
 
 ```javascript
-clm.getCountryNameByAlpha2('CA'); 
+clm.getCountryByAlpha2('CA'); 
 
 /*returns 
 
