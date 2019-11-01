@@ -5,7 +5,7 @@ Provides easy conversion between country codes and names as well as a default lo
 ## Usage
 
 ```javascript
-const clm = require(country-locale-map);
+const clm = require('country-locale-map');
 clm.getAlpha3ByAlpha2('CA'); //returns 'CAN' 
 ```
 
