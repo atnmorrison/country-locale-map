@@ -1,9 +1,7 @@
-const fs = require('fs'); 
 const fuzz = require('fuzzball');
 function CLM() {
     var clm = {};
-    var rawdata = fs.readFileSync(__dirname+'/countries.json');
-    var countries = JSON.parse(rawdata);
+    var countries = require('./countries.json');
 
     var countryByAlpha2Code = {};
     var countryByAlpha3Code = {};
