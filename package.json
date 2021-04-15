@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "countries-list": "^2.5.4",
+    "countries-list": "^2.5.6",
     "country-code-lookup": "0.0.14",
     "eslint": "^6.8.0",
     "mocha": "^6.2.3"

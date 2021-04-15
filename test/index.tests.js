@@ -182,11 +182,6 @@ describe('CountryLanguageMap', function(){
         expect(result.emoji).to.equal('🇨🇦');
     });
 
-
-
-
-
-
     it('getCountryByAlpha3 should return object if passed USA', function(){
         let result = clm.getCountryByAlpha3('USA');
         expect(result.alpha3).to.equal('USA');
@@ -196,4 +191,30 @@ describe('CountryLanguageMap', function(){
         expect(result.numeric).to.equal('840');
         expect(result.currency).to.equal('USD');
     });
+
+
+    it('getCountryByName should return Russia if passed Russia', function(){
+
+        let result = clm.getCountryByName('Russia', false)        
+        expect(result.alpha3).to.equal('RUS')
+        expect(result.currency).to.equal('RUB')
+
+    });
+
+    it('getCountryByName should return UK if passed United Kingdom', function(){
+
+        let result = clm.getCountryByName('United Kingdom', true)        
+        expect(result.alpha3).to.equal('GBR')
+        expect(result.currency).to.equal('GBP')
+
+    });
+
+    it('getAllCountries should return 193 countries', function(){
+
+        let result = clm.getAllCountries();     
+        expect(result.length).to.equal(248)
+
+    });
+
+
 })

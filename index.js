@@ -9,13 +9,23 @@ function CLM() {
     var countryByName = {};
     var countryNames = [];
 
-
     for(let i=0; i<countries.length; ++i) {
         countryByAlpha2Code[countries[i]['alpha2']] = countries[i];
         countryByAlpha3Code[countries[i]['alpha3']] = countries[i];
         countryByNumericCode[countries[i]['numeric']] = countries[i];
         countryByName[countries[i]['name']] = countries[i];
         countryNames.push(countries[i]['name']);
+
+        if(countries[i]['alternate_names']) {
+            for(let j=0; j<countries[i]['alternate_names'].length; ++j) {
+                countryByName[countries[i]['alternate_names'][j]] = countries[i];
+                countryNames.push(countries[i]['alternate_names'][j]);
+            }
+        }
+    }
+
+    clm.getAllCountries = function(){
+        return countries;
     }
 
     /* get values by alpha2 */
