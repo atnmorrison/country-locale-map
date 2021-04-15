@@ -284,3 +284,14 @@ clm.getCountryByName('Candaa', true);
 
 ```
 
+- getAllCountries()
+
+```javascript
+clm.getCountryByName('Candaa', true);
+
+/*returns 
+    the list of all countries 
+*/
+
+```
+
