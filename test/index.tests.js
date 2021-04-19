@@ -209,10 +209,10 @@ describe('CountryLanguageMap', function(){
 
     });
 
-    it('getAllCountries should return 193 countries', function(){
+    it('getAllCountries should return 249 countries', function(){
 
         let result = clm.getAllCountries();     
-        expect(result.length).to.equal(248)
+        expect(result.length).to.equal(249)
 
     });
 
