@@ -201,11 +201,20 @@ describe('CountryLanguageMap', function(){
 
     });
 
-    it('getCountryByName should return UK if passed United Kingdom', function(){
+    it('getCountryByName should return United Kingdom if passed United Kingdom', function(){
 
         let result = clm.getCountryByName('United Kingdom', true)        
         expect(result.alpha3).to.equal('GBR')
         expect(result.currency).to.equal('GBP')
+
+    });
+
+
+    it('getCountryByName should return Australia if passed United Kingdom', function(){
+
+        let result = clm.getCountryByName('Australia', true)        
+        expect(result.alpha3).to.equal('AUS')
+        expect(result.currency).to.equal('AUD')
 
     });
 
