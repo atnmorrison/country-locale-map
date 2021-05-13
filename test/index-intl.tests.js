@@ -2,10 +2,13 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-process.env.CLM_MODE = undefined; 
+
+
+process.env.CLM_MODE = 'INTL';
 
 delete require.cache[require.resolve('../index.js')];
-const clm = require('../index.js');
+const clm =  require('../index.js');
+
 
 describe('CountryLanguageMap', function(){
 
@@ -26,7 +29,7 @@ describe('CountryLanguageMap', function(){
 
     it('getLocaleByAlpha2 should return en_CA if passed in CA', function(){
         let result = clm.getLocaleByAlpha2('CA');
-        expect(result).to.equal('en_CA');
+        expect(result).to.equal('en-CA');
     });
 
     it('getCurrencyByAlpha2 should return CAD if passed in CA', function(){
@@ -60,7 +63,7 @@ describe('CountryLanguageMap', function(){
 
     it('getLocaleByAlpha3 should return en_CA if passed in CAN', function(){
         let result = clm.getLocaleByAlpha3('CAN');
-        expect(result).to.equal('en_CA');
+        expect(result).to.equal('en-CA');
     });
 
     it('getCurrencyByAlpha2 should return CAD if passed in CAN', function(){
@@ -95,7 +98,7 @@ describe('CountryLanguageMap', function(){
 
     it('getLocaleByNumeric should return en_CA if passed in 124', function(){
         let result = clm.getLocaleByNumeric('124');
-        expect(result).to.equal('en_CA');
+        expect(result).to.equal('en-CA');
     });
 
     it('getCurrencyByNumeric should return CAD if passed in 124', function(){
@@ -130,7 +133,7 @@ describe('CountryLanguageMap', function(){
 
     it('getLocaleByName should return en_CA if passed in Canada', function(){
         let result = clm.getLocaleByName('Canada');
-        expect(result).to.equal('en_CA');
+        expect(result).to.equal('en-CA');
     });
 
     it('getCurrencyByName should return CAD if passed in Canada', function(){
@@ -167,7 +170,7 @@ describe('CountryLanguageMap', function(){
 
     it('getLocaleByName should return en_CA if passed in Cnaada', function(){
         let result = clm.getLocaleByName('Cnaada', true);
-        expect(result).to.equal('en_CA');
+        expect(result).to.equal('en-CA');
     });
 
     it('getCurrencyByName should return CAD if passed in Canaa', function(){
@@ -191,7 +194,7 @@ describe('CountryLanguageMap', function(){
         expect(result.alpha3).to.equal('USA');
         expect(result.alpha2).to.equal('US');
         expect(result.name).to.equal('United States');
-        expect(result.default_locale).to.equal('en_US');
+        expect(result.default_locale).to.equal('en-US');
         expect(result.numeric).to.equal('840');
         expect(result.currency).to.equal('USD');
     });
@@ -229,10 +232,5 @@ describe('CountryLanguageMap', function(){
 
     });
 
-
-    it('getLocaleByName should return zh_CN if passed in China', function(){
-        let result = clm.getLocaleByName('China', true);
-        expect(result).to.equal('zh_CN');
-    });
 
 })

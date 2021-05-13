@@ -9,6 +9,10 @@ const clm = require('country-locale-map');
 clm.getAlpha3ByAlpha2('CA'); //returns 'CAN' 
 ```
 
+If you would like locales to be returned with - instead of_ you can set an environment variable 
+
+CLM_MODE='INTL' in a .env file using [dotenv](https://www.npmjs.com/package/dotenv) just make sure that dotenv is required before requiring the country local map library 
+
 ## Functions
 
 ### Alpha2 
