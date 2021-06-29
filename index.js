@@ -3,7 +3,6 @@ function CLM() {
     var clm = {};
 
     var countries; 
-    console.log(process.env.CLM_MODE);
 
     if(process && process.env && process.env.CLM_MODE == 'INTL') {
         countries = require('./countries-intl.json');
