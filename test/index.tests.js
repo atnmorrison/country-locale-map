@@ -214,7 +214,7 @@ describe('CountryLanguageMap', function(){
     });
 
 
-    it('getCountryByName should return Australia if passed United Kingdom', function(){
+    it('getCountryByName should return Australia if passed Austrailia', function(){
 
         let result = clm.getCountryByName('Australia', true)        
         expect(result.alpha3).to.equal('AUS')
@@ -233,6 +233,13 @@ describe('CountryLanguageMap', function(){
     it('getLocaleByName should return zh_CN if passed in China', function(){
         let result = clm.getLocaleByName('China', true);
         expect(result).to.equal('zh_CN');
+    });
+
+    it('getCountryByName should return Taiwan if passed United Taiwan', function(){
+
+        let result = clm.getCountryByName('Taiwan', true);        
+        expect(result.currency).to.equal('TWD');
+
     });
 
 })
