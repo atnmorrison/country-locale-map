@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "node_modules/.bin/mocha",
+    "test": "nodemon --exec \"mocha -R min\"",
     "lint": "eslint index.js",
     "format": "prettier --write \"src/**/*.+(js|md|ts|css|sass|less|graphql|yml|yaml|scss|json|vue)\""
   },
