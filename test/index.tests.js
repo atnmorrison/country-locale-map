@@ -242,4 +242,9 @@ describe('CountryLanguageMap', function(){
 
     });
 
+    it('getCountryByName should return Romania if passed Romania', function(){
+        let result = clm.getCountryByName('Romania', true);        
+        expect(result.currency).to.equal('RON');
+    });
+
 })

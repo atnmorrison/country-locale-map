@@ -232,10 +232,15 @@ describe('CountryLanguageMap', function(){
 
     });
 
-    it('getCountryByName should return Taiwan if passed United Taiwan', function(){
+    it('getCountryByName should return Taiwan if passed Taiwan', function(){
         let result = clm.getCountryByName('Taiwan', true);        
         expect(result.currency).to.equal('TWD');
     });
 
+
+    it('getCountryByName should return Romania if passed Romania', function(){
+        let result = clm.getCountryByName('Romania', true);        
+        expect(result.currency).to.equal('RON');
+    });
 
 })
