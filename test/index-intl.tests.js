@@ -232,5 +232,10 @@ describe('CountryLanguageMap', function(){
 
     });
 
+    it('getCountryByName should return Taiwan if passed United Taiwan', function(){
+        let result = clm.getCountryByName('Taiwan', true);        
+        expect(result.currency).to.equal('TWD');
+    });
+
 
 })

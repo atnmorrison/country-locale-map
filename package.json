@@ -1,11 +1,11 @@
 {
   "name": "country-locale-map",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Provides mapping between country codes and provides default country locals. Includes optional fuzzy matching for country name.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "node_modules/.bin/mocha",
+    "test": "nodemon --exec \"mocha -R min\"",
     "lint": "eslint index.js",
     "format": "prettier --write \"src/**/*.+(js|md|ts|css|sass|less|graphql|yml|yaml|scss|json|vue)\""
   },
