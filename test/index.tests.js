@@ -194,6 +194,7 @@ describe('CountryLanguageMap', function(){
         expect(result.default_locale).to.equal('en_US');
         expect(result.numeric).to.equal('840');
         expect(result.currency).to.equal('USD');
+        expect(result.currency_name).to.equal('US Dollar');
     });
 
 
