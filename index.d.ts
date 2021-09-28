@@ -6,6 +6,7 @@ interface Country {
   locales: string[];
   default_locale: string;
   currency: string;
+  currency_name: string;
   languages: string[];
   capital: string;
   emoji: string;
