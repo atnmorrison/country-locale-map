@@ -26,7 +26,7 @@
     "url": "https://github.com/atnmorrison/country-locale-map"
   },
   "author": "atnmorrison",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "fuzzball": "^1.3.0"
   },
