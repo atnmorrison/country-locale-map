@@ -223,10 +223,10 @@ describe('CountryLanguageMap', function(){
 
     });
 
-    it('getAllCountries should return 249 countries', function(){
+    it('getAllCountries should return 251 countries', function(){
 
         let result = clm.getAllCountries();     
-        expect(result.length).to.equal(249)
+        expect(result.length).to.equal(251)
 
     });
 
@@ -246,6 +246,16 @@ describe('CountryLanguageMap', function(){
     it('getCountryByName should return Romania if passed Romania', function(){
         let result = clm.getCountryByName('Romania', true);        
         expect(result.currency).to.equal('RON');
+    });
+
+    it('getCountryByName should return Kosovo if passed Kosovo', function(){
+        let result = clm.getCountryByName('Kosovo', true);        
+        expect(result.currency).to.equal('EUR');
+    });
+
+    it('getCurrencyByName should return UYW if passed in Uruguay', function(){
+        let result = clm.getCurrencyByName('Uruguay');
+        expect(result).to.equal('UYW');
     });
 
 })
