@@ -1,6 +1,6 @@
 {
   "name": "country-locale-map",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "Provides mapping between country codes and provides default country locales. Includes optional fuzzy matching for country name.",
   "main": "index.js",
   "types": "index.d.ts",
