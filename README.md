@@ -1,6 +1,7 @@
 # Country Locale Map [![Build Status](https://travis-ci.com/atnmorrison/country-locale-map.svg?branch=master)](https://travis-ci.com/atnmorrison/country-locale-map)
 
-Provides easy conversion between country codes and names as well as a default locale for each country. Includes fuzzy matching for country name lookups.
+Provides easy conversion between country codes and names as well as a default locale for each country. Includes fuzzy matching for country name lookups. 
+Methods return undefined if no matches are found 
 
 ## Usage
 
