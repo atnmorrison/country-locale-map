@@ -252,6 +252,6 @@ describe('CountryLanguageMap', function(){
 
     it('getCurrencyByName should return UYW if passed in Uruguay', function(){
         let result = clm.getCurrencyByName('Uruguay');
-        expect(result).to.equal('UYW');
+        expect(result).to.equal('UYU');
     });
 })
