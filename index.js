@@ -3,7 +3,7 @@ function CLM() {
     var clm = {};
     var countries; 
 
-    if(process && process.env && process.env.CLM_MODE == 'INTL') {
+    if((typeof process !== 'undefined') && process && process.env && process.env.CLM_MODE == 'INTL') {
         countries = require('./countries-intl.json');
     } else {
         countries = require('./countries.json');
