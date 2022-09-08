@@ -23,7 +23,7 @@ interface CLM {
   getAlpha3ByAlpha2: (alpha2: string) => string | undefined;
   getLocaleByAlpha2: (alpha2: string) => string | undefined;
   getCountryNameByAlpha2: (alpha2: string) => string | undefined;
-  getNumericByAlpha2: (alpha2: string) => string | undefiend;
+  getNumericByAlpha2: (alpha2: string) => string | undefined;
   getCurrencyByAlpha2: (alpha2: string) => string | undefined;
   getCountryByAlpha2: (alpha2: string) => Country | undefined;
   getAlpha2ByAlpha3: (alpha3: string) => string | undefined;
