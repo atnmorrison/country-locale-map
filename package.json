@@ -1,6 +1,6 @@
 {
   "name": "country-locale-map",
-  "version": "1.8.6",
+  "version": "1.8.7",
   "homepage": "https://npm-world-locale-map.herokuapp.com/",
   "description": "Provides mapping between country codes and provides default country locales. Includes optional fuzzy matching for country name.",
   "main": "index.js",
