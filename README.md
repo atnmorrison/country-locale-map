@@ -263,7 +263,7 @@ clm.getCountryByName('Canada');
 if true is passed for fuzzy these functions will do a fuzzy match if it can't find an exact match eg:
 
 ```javascript
-clm.getCountryByName('Candaa', true);
+clm.getCountryByName('Canada', true);
 
 /*returns 
 
