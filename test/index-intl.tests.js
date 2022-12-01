@@ -254,4 +254,9 @@ describe('CountryLanguageMap', function(){
         let result = clm.getCurrencyByName('Uruguay');
         expect(result).to.equal('UYU');
     });
+
+  it("getCurrencyByAlpha2 should return KRW if passed in KR", function () {
+    let result = clm.getCurrencyByAlpha2("KR");
+    expect(result).to.equal("KRW");
+  });
 })
