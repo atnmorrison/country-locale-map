@@ -36,6 +36,6 @@
     "countries-list": "^2.5.6",
     "country-code-lookup": "0.0.14",
     "eslint": "^6.8.0",
-    "mocha": "^6.2.3"
+    "mocha": "^10.2.0"
   }
 }
