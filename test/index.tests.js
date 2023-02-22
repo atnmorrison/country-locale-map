@@ -112,6 +112,39 @@ describe('CountryLanguageMap', function(){
         expect(result.currency).to.equal('CAD');
     });
 
+    it('getAlpha3ByCurrency should return CAN if passed in CAD', function(){
+        let result = clm.getAlpha3ByCurrency('CAD');
+        expect(result).to.equal('CAN');
+    });
+
+    it('getNumericByCurrency should return CAN if passed in CAD', function(){
+        let result = clm.getNumericByCurrency('CAD');
+        expect(result).to.equal('124');
+    });
+
+    it('getCountryNameByCurrency should return Canada if passed in CAD', function(){
+        let result = clm.getCountryNameByCurrency('CAD');
+        expect(result).to.equal('Canada');
+    });
+
+    it('getLocaleByCurrency should return en_CA if passed in CAD', function(){
+        let result = clm.getLocaleByCurrency('CAD');
+        expect(result).to.equal('en_CA');
+    });
+
+    it('getNumericByCurrency should return CAD if passed in CAD', function(){
+        let result = clm.getNumericByCurrency('CAD');
+        expect(result).to.equal('124');
+    });
+
+    it('getCountryByCurrency should return object if passed in CAD', function(){
+        let result = clm.getCountryByCurrency('CAD');
+        expect(result.alpha3).to.equal('CAN');
+        expect(result.alpha2).to.equal('CA');
+        expect(result.name).to.equal('Canada');
+        expect(result.numeric).to.equal('124');
+    });
+
 
     it('getAlpha3ByName should return CAN if passed in Canada', function(){
         let result = clm.getAlpha3ByName('Canada');

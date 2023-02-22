@@ -12,6 +12,7 @@ function CLM() {
     var countryByAlpha2Code = {};
     var countryByAlpha3Code = {};
     var countryByNumericCode = {};
+    var countryByCurrency = {};
     var countryByName = {};
     var countryNames = [];
 
@@ -19,6 +20,7 @@ function CLM() {
         countryByAlpha2Code[countries[i]['alpha2']] = countries[i];
         countryByAlpha3Code[countries[i]['alpha3']] = countries[i];
         countryByNumericCode[countries[i]['numeric']] = countries[i];
+        countryByCurrency[countries[i]['currency']] = countries[i];
         countryByName[countries[i]['name']] = countries[i];
         countryNames.push(countries[i]['name']);
 
@@ -154,6 +156,46 @@ function CLM() {
         return countryByNumericCode[numeric];
     };
 
+    /* get values by currency */
+    clm.getAlpha2ByCurrency = function(currency) {
+        if(countryByCurrency[currency])
+            return countryByCurrency[currency].alpha2;
+        else 
+            return undefined;
+    }; 
+
+    clm.getAlpha3ByCurrency = function(currency) {
+        if(countryByCurrency[currency])
+            return countryByCurrency[currency].alpha3;
+        else 
+            return undefined;
+    };     
+
+    clm.getLocaleByCurrency = function(currency) {
+        if(countryByCurrency[currency])
+            return countryByCurrency[currency].default_locale;
+        else 
+            return undefined;
+    };
+
+    clm.getCountryNameByCurrency = function(currency) {
+        if(countryByCurrency[currency])
+            return countryByCurrency[currency].name;
+        else 
+            return undefined; 
+    };    
+
+    clm.getNumericByCurrency = function(currency) {
+        if(countryByCurrency[currency])
+            return countryByCurrency[currency].numeric;
+        else 
+            return undefined;
+    };
+
+    clm.getCountryByCurrency = function(currency) {
+        return countryByCurrency[currency];
+    };
+
     /* get values by country name */
     clm.getAlpha2ByName = function(name, fuzzy) {
         if(countryByName[name]) {
@@ -244,7 +286,7 @@ function CLM() {
 
     }
 
-    return clm; 
+    return clm;
 
 }
 
