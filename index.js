@@ -30,133 +30,139 @@ function CLM() {
         }
     }
 
+    Object.freeze(countryByAlpha2Code)
+    Object.freeze(countryByAlpha3Code)
+    Object.freeze(countryByNumericCode)
+    Object.freeze(countryByName)
+    Object.freeze(countryNames)
+
     clm.getAllCountries = function(){
         return countries;
     }
 
     /* get values by alpha2 */
     clm.getAlpha3ByAlpha2 = function(alpha2) {
-        if(countryByAlpha2Code[alpha2])
+        if (countryByAlpha2Code.hasOwnProperty(alpha2))
             return countryByAlpha2Code[alpha2].alpha3;
         else 
             return undefined;
     }; 
 
     clm.getLocaleByAlpha2 = function(alpha2) {
-        if(countryByAlpha2Code[alpha2])
+        if (countryByAlpha2Code.hasOwnProperty(alpha2))
             return countryByAlpha2Code[alpha2].default_locale;
         else 
             return undefined;
     };
 
     clm.getCountryNameByAlpha2 = function(alpha2) {
-        if(countryByAlpha2Code[alpha2])
+        if (countryByAlpha2Code.hasOwnProperty(alpha2))
             return countryByAlpha2Code[alpha2].name;
         else 
             return undefined; 
     };
 
     clm.getNumericByAlpha2 = function(alpha2) {
-        if(countryByAlpha2Code[alpha2])
+        if (countryByAlpha2Code.hasOwnProperty(alpha2))
             return countryByAlpha2Code[alpha2].numeric;
         else 
             return undefined; 
     };
     
     clm.getCurrencyByAlpha2 = function(alpha2) {
-        if(countryByAlpha2Code[alpha2])
+        if (countryByAlpha2Code.hasOwnProperty(alpha2))
             return countryByAlpha2Code[alpha2].currency;
         else 
             return undefined; 
     }; 
 
     clm.getCountryByAlpha2 = function(alpha2) {
-        return countryByAlpha2Code[alpha2];
+        return countryByAlpha2Code.hasOwnProperty(alpha2) ? countryByAlpha2Code[alpha2] : undefined;
     }
 
     /* get values by alpha3 */
     clm.getAlpha2ByAlpha3 = function(alpha3) {
-        if(countryByAlpha3Code[alpha3])
+        if (countryByAlpha3Code.hasOwnProperty(alpha3))
             return countryByAlpha3Code[alpha3].alpha2;
         else 
             return undefined;
     }; 
 
     clm.getLocaleByAlpha3 = function(alpha3) {
-        if(countryByAlpha3Code[alpha3])
+        if (countryByAlpha3Code.hasOwnProperty(alpha3))
             return countryByAlpha3Code[alpha3].default_locale;
         else 
             return undefined;
     };
 
     clm.getCountryNameByAlpha3 = function(alpha3) {
-        if(countryByAlpha3Code[alpha3])
+        if (countryByAlpha3Code.hasOwnProperty(alpha3))
             return countryByAlpha3Code[alpha3].name;
         else 
             return undefined; 
     };
 
     clm.getNumericByAlpha3 = function(alpha3) {
-        if(countryByAlpha3Code[alpha3])
+        if (countryByAlpha3Code.hasOwnProperty(alpha3))
             return countryByAlpha3Code[alpha3].numeric;
         else 
             return undefined; 
     };    
 
     clm.getCurrencyByAlpha3 = function(alpha3) {
-        if(countryByAlpha3Code[alpha3])
+        if (countryByAlpha3Code.hasOwnProperty(alpha3))
             return countryByAlpha3Code[alpha3].currency;
         else 
             return undefined; 
     }; 
 
     clm.getCountryByAlpha3 = function(alpha3) {
-        return countryByAlpha3Code[alpha3];
+        return countryByAlpha3Code.hasOwnProperty(alpha3) ? countryByAlpha3Code[alpha3] : undefined;
     }
 
     /* get values by numeric */
     clm.getAlpha2ByNumeric = function(numeric) {
-        if(countryByNumericCode[numeric])
+        if (countryByNumericCode.hasOwnProperty(numeric))
             return countryByNumericCode[numeric].alpha2;
         else 
             return undefined;
     }; 
 
     clm.getAlpha3ByNumeric = function(numeric) {
-        if(countryByNumericCode[numeric])
+        if (countryByNumericCode.hasOwnProperty(numeric))
             return countryByNumericCode[numeric].alpha3;
         else 
             return undefined;
     };     
 
     clm.getLocaleByNumeric = function(numeric) {
-        if(countryByNumericCode[numeric])
+        if (countryByNumericCode.hasOwnProperty(numeric))
             return countryByNumericCode[numeric].default_locale;
         else 
             return undefined;
     };
 
     clm.getCountryNameByNumeric = function(numeric) {
-        if(countryByNumericCode[numeric])
+        if (countryByNumericCode.hasOwnProperty(numeric))
             return countryByNumericCode[numeric].name;
         else 
             return undefined; 
     };    
 
     clm.getCurrencyByNumeric = function(numeric) {
-        if(countryByNumericCode[numeric])
+        if (countryByNumericCode.hasOwnProperty(numeric))
             return countryByNumericCode[numeric].currency;
         else 
             return undefined;
     };
 
     clm.getCountryByNumeric = function(numeric) {
-        return countryByNumericCode[numeric];
+        return countryByNumericCode.hasOwnProperty(numeric) ? countryByNumericCode[numeric] : undefined;
     };
 
     /* get values by country name */
     clm.getAlpha2ByName = function(name, fuzzy) {
-        if(countryByName[name]) {
+        if(countryByName.hasOwnProperty(name)) {
             return countryByName[name].alpha2;
         } else if(fuzzy) {
             let match = getClosestMatch(name);
@@ -168,7 +174,7 @@ function CLM() {
     }; 
 
     clm.getAlpha3ByName = function(name, fuzzy) {
-        if(countryByName[name]) {
+        if(countryByName.hasOwnProperty(name)) {
             return countryByName[name].alpha3;
         } else if(fuzzy) {
             let match = getClosestMatch(name);
@@ -181,7 +187,7 @@ function CLM() {
     };     
 
     clm.getLocaleByName = function(name, fuzzy) {
-        if(countryByName[name]) {
+        if(countryByName.hasOwnProperty(name)) {
             return countryByName[name].default_locale;
         } else if(fuzzy) {
             let match = getClosestMatch(name);
@@ -194,7 +200,7 @@ function CLM() {
     };
 
     clm.getNumericByName = function(name, fuzzy) {
-        if(countryByName[name]) {
+        if(countryByName.hasOwnProperty(name)) {
             return countryByName[name].numeric;
         } else if(fuzzy) {
             let match = getClosestMatch(name);
@@ -206,7 +212,7 @@ function CLM() {
     };    
 
     clm.getCurrencyByName = function(name, fuzzy) {
-        if(countryByName[name]) {
+        if(countryByName.hasOwnProperty(name)) {
             return countryByName[name].currency;
         } else if(fuzzy) {
             let match = getClosestMatch(name);
@@ -220,7 +226,7 @@ function CLM() {
 
     clm.getCountryByName = function(name, fuzzy) {
         
-        if(countryByName[name]) {
+        if(countryByName.hasOwnProperty(name)) {
             return countryByName[name];
         } else if(fuzzy) {
             let match = getClosestMatch(name);
