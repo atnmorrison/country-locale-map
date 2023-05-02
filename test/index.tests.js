@@ -262,4 +262,20 @@ describe('CountryLanguageMap', function(){
     let result = clm.getCurrencyByAlpha2("KR");
     expect(result).to.equal("KRW");
   });
+
+  it("getCountryByName should be unable to read the prototype", function () {
+    expect(clm.getCountryByName("__proto__")).to.equal(undefined)
+  })
+
+  it("getCountryByAlpha2 should be unable to read the prototype", function () {
+    expect(clm.getCountryByAlpha2("__proto__")).to.equal(undefined)
+  })
+
+  it("getCountryByAlpha3 should be unable to read the prototype", function () {
+    expect(clm.getCountryByAlpha3("__proto__")).to.equal(undefined)
+  })
+
+  it("getCountryByNumeric should be unable to read the prototype", function () {
+    expect(clm.getCountryByNumeric("__proto__")).to.equal(undefined)
+  })
 })
