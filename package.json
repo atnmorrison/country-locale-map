@@ -1,6 +1,6 @@
 {
   "name": "country-locale-map",
-  "version": "1.8.15",
+  "version": "1.9.0",
   "homepage": "https://willowy-trifle-097485.netlify.app",
   "description": "Provides mapping between country codes and provides default country locales. Includes optional fuzzy matching for country name.",
   "main": "index.js",
