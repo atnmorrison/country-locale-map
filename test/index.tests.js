@@ -263,6 +263,12 @@ describe('CountryLanguageMap', function(){
     expect(result).to.equal("KRW");
   });
 
+  it("getCurrencyByAlpha2 should return BOB if passed in BO", function () {
+    let result = clm.getCurrencyByAlpha2("BO");
+    expect(result).to.equal("BOB");
+  });
+
+
   it("getCountryByName should be unable to read the prototype", function () {
     expect(clm.getCountryByName("__proto__")).to.equal(undefined)
   })

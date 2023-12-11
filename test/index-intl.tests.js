@@ -259,4 +259,11 @@ describe('CountryLanguageMap', function(){
     let result = clm.getCurrencyByAlpha2("KR");
     expect(result).to.equal("KRW");
   });
+
+  it("getCurrencyByAlpha2 should return BOB if passed in BO", function () {
+    let result = clm.getCurrencyByAlpha2("BO");
+    expect(result).to.equal("BOB");
+  });
+
+
 })

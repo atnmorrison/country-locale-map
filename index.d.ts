@@ -16,6 +16,8 @@ interface Country {
   continent: string;
   region: string;
   alternate_names?: string[];
+  latitude?: number;
+  longitude?: number;
 }
 
 interface CLM {
