@@ -265,5 +265,10 @@ describe('CountryLanguageMap', function(){
     expect(result).to.equal("BOB");
   });
 
+  it("getCurrencyByAlpha2 should return EUR if passed in HR", function () {
+    let result = clm.getCurrencyByAlpha2("HR");
+    expect(result).to.equal("EUR");
+  });
+
 
 })
