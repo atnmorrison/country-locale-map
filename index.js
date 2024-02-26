@@ -1,4 +1,4 @@
-const fuzz = require('fuzzball/ultra_lite');
+const fuzz = require('fuzzball');
 function CLM() {
     var clm = {};
     var countries; 
