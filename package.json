@@ -29,14 +29,14 @@
   "author": "atnmorrison",
   "license": "MIT",
   "dependencies": {
-    "fuzzball": "^2.1.2",
-    "nodemon": "^3.0.2"
+    "fuzzball": "^2.1.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "countries-list": "^2.6.1",
     "country-code-lookup": "^0.0.14",
     "eslint": "^6.8.0",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.2"
   }
 }
