@@ -29,7 +29,6 @@
   "author": "atnmorrison",
   "license": "MIT",
   "dependencies": {
-    "cctx": "^1.0.1",
     "fuzzball": "^2.1.2",
     "nodemon": "^3.0.2"
   },
