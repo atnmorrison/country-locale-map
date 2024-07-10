@@ -1,7 +1,7 @@
 {
   "name": "country-locale-map",
   "version": "1.9.6",
-  "homepage": "https://willowy-trifle-097485.netlify.app",
+  "homepage": "https://worldcountries.rocketmanmorrison.ca",
   "description": "Provides mapping between country codes and provides default country locales. Includes optional fuzzy matching for country name.",
   "main": "index.js",
   "types": "index.d.ts",
