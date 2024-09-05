@@ -1,6 +1,6 @@
 {
   "name": "country-locale-map",
-  "version": "1.9.7",
+  "version": "1.9.8",
   "homepage": "https://worldcountries.rocketmanmorrison.ca",
   "description": "Provides mapping between country codes and provides default country locales. Includes optional fuzzy matching for country name.",
   "main": "index.js",
