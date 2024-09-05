@@ -259,6 +259,16 @@ describe('CountryLanguageMap', function () {
         expect(result).to.equal('CLP')
     })
 
+    it('getCurrencyByAlpha2 should return CHF if passed in CH', function () {
+        let result = clm.getCurrencyByAlpha2('CH')
+        expect(result).to.equal('CHF')
+    })
+
+    it('getCurrencyByAlpha2 should return COP if passed in CO', function () {
+        let result = clm.getCurrencyByAlpha2('CO')
+        expect(result).to.equal('COP')
+    })
+
     it('getCountryByName should be unable to read the prototype', function () {
         expect(clm.getCountryByName('__proto__')).to.equal(undefined)
     })
