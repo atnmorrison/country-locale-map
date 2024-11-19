@@ -184,7 +184,7 @@ describe('CountryLanguageMap', function () {
         let result = clm.getCountryByAlpha3('USA')
         expect(result.alpha3).to.equal('USA')
         expect(result.alpha2).to.equal('US')
-        expect(result.name).to.equal('United States')
+        expect(result.name).to.equal('United States of America')
         expect(result.default_locale).to.equal('en-US')
         expect(result.numeric).to.equal('840')
         expect(result.currency).to.equal('USD')
