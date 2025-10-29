@@ -252,4 +252,12 @@ describe('CountryLanguageMap', function () {
         let result = clm.getCurrencyByAlpha2('CL')
         expect(result).to.equal('CLP')
     })
+    
+    it("getCountriesByContinent should return array of africa countries if passed in Africa", function () {
+      let result = clm.getCountriesByContinent("Africa");
+      let africaCountries = clm
+        .getAllCountries()
+        .filter((c) => c.continent === "Africa");
+      expect(result).to.deep.equal(africaCountries);
+    });
 })

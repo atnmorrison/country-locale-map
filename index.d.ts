@@ -30,7 +30,7 @@ interface CLM {
   getCountryByAlpha2: (alpha2: string) => Country | undefined;
   getAlpha2ByAlpha3: (alpha3: string) => string | undefined;
   getLocaleByAlpha3: (alpha3: string) => string | undefined;
-  getCountryNameByAlpha3: (alpha3: string) => string| undefined;
+  getCountryNameByAlpha3: (alpha3: string) => string | undefined;
   getNumericByAlpha3: (alpha3: string) => string | undefined;
   getCurrencyByAlpha3: (alpha3: string) => string | undefined;
   getCountryByAlpha3: (alpha3: string) => Country | undefined;
@@ -46,6 +46,7 @@ interface CLM {
   getNumericByName: (name: string, fuzzy?: boolean) => string | undefined;
   getCurrencyByName: (name: string, fuzzy?: boolean) => string | undefined;
   getCountryByName: (name: string, fuzzy?: boolean) => Country | undefined;
+  getCountriesByContinent: (name: string) => Country[] | undefined;
 }
 declare const clm: CLM;
 export = clm;

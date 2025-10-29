@@ -14,14 +14,19 @@ function CLM() {
     var countryByNumericCode = {};
     var countryByName = {};
     var countryNames = [];
-
+    var countriesByContinent = {};
+    
     for(let i=0; i<countries.length; ++i) {
         countryByAlpha2Code[countries[i]['alpha2']] = countries[i];
         countryByAlpha3Code[countries[i]['alpha3']] = countries[i];
         countryByNumericCode[countries[i]['numeric']] = countries[i];
         countryByName[countries[i]['name']] = countries[i];
         countryNames.push(countries[i]['name']);
-
+        countriesByContinent[countries[i]["continent"]] = [
+                          ...(countriesByContinent[countries[i]["continent"]] || []),
+                          countries[i],
+                        ];
+        
         if(countries[i]['alternate_names']) {
             for(let j=0; j<countries[i]['alternate_names'].length; ++j) {
                 countryByName[countries[i]['alternate_names'][j]] = countries[i];
@@ -35,7 +40,8 @@ function CLM() {
     Object.freeze(countryByNumericCode)
     Object.freeze(countryByName)
     Object.freeze(countryNames)
-
+    Object.freeze(countriesByContinent);
+    
     clm.getAllCountries = function(){
         return countries;
     }
@@ -238,7 +244,15 @@ function CLM() {
         return undefined; 
 
     };
-
+    
+    /* get countries by continent name */
+    clm.getCountriesByContinent = function (name) {
+      if (countriesByContinent.hasOwnProperty(name)) {
+        return countriesByContinent[name];
+      }
+      return undefined
+    }
+    
     function getClosestMatch(name) {
 
         let result = fuzz.extract(name, countryNames);
