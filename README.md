@@ -299,4 +299,33 @@ clm.getAllCountries();
 */
 
 ```
+- getCountriesByContinent()
 
+```javascript
+clm.getCountriesByContinent("Africa")
+
+/*returns
+    the list of africa countries
+    [{
+      name: 'Algeria',
+      alpha2: 'DZ',
+      alpha3: 'DZA',
+      numeric: '012',
+      locales: ["ar_DZ","kab_DZ"],
+      default_locale: 'ar_DZ',
+      currency: 'DZD',
+      latitude: '28.033886',
+      longitude: '1.659626',
+      currency_name: 'Algerian Dinar',
+      languages: ["ar"],
+      capital: 'Algiers',
+      emoji: '🇩🇿',
+      emojiU: 'U+1F1E9 U+1F1FF',
+      fips: 'AG',
+      internet: 'DZ',
+      continent: 'Africa',
+      region: 'Northern Africa'      
+    }, ...]
+*/
+
+```

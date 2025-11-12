@@ -284,4 +284,13 @@ describe('CountryLanguageMap', function () {
     it('getCountryByNumeric should be unable to read the prototype', function () {
         expect(clm.getCountryByNumeric('__proto__')).to.equal(undefined)
     })
+    
+    it("getCountriesByContinent should return array of africa countries if passed in Africa", function () {
+      let result = clm.getCountriesByContinent("Africa");
+      let africaCountries = clm
+        .getAllCountries()
+        .filter((c) => c.continent === "Africa");
+
+      expect(result).to.deep.equal(africaCountries);
+    });
 })
