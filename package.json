@@ -35,7 +35,7 @@
     "chai": "^4.2.0",
     "countries-list": "^2.6.1",
     "country-code-lookup": "^0.0.14",
-    "eslint": "^6.8.0",
+    "eslint": "^9.38.0",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.2"
   }
