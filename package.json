@@ -37,6 +37,6 @@
     "country-code-lookup": "^0.0.14",
     "eslint": "^9.38.0",
     "mocha": "^10.2.0",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.1.14"
   }
 }
